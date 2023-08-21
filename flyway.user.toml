@@ -1,4 +1,19 @@
-[flywayDesktop]
+[environments.development]
+user = "postgres"
+password = "${localSecret.Flyway Desktop 847e735f-3f29-433e-ae12-fc9ca9e20c1a}"
 
-[redgateCompare]
-filterFile = "filter.rgf"
+[environments.shadow]
+user = "postgres"
+password = "${localSecret.Flyway Desktop adf77019-1d18-4430-8691-842620f8c9ee}"
+
+[environments.Test]
+user = "postgres"
+password = "${localSecret.Flyway Desktop 8d36b0da-d0b7-4add-8c69-7b313311ec1f}"
+
+[environments.Prod]
+user = "postgres"
+password = "${localSecret.Flyway Desktop 1052cb10-21f8-4cdc-a440-3d066c0646e4}"
+
+[environments.Build]
+user = "postgres"
+password = "${localSecret.Flyway Desktop 8939d311-5150-4676-9fe5-6cc0cd756a8c}"
