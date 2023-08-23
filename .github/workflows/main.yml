@@ -147,4 +147,4 @@ jobs:
       - name: Migrate Production DB
         if: ${{ true }}
         run: |
-          flyway -user="${{ env.userName }}" -password="${{ env.password }}" -baselineOnMigrate="true" -licenseKey="${{ env.FLYWAY_LICENSE_KEY }}" -locations="filesystem:${{ GITHUB.WORKSPACE }}\migrations" info migrate info -url="${{ env.JDBC }}" -cleanDisabled="false" -errorOverrides="S0001:0:I-" -user=${{ secrets.USER }} -password=${{ secrets.PASSWORD }}
+          flyway -baselineOnMigrate="true" -licenseKey="${{ env.FLYWAY_LICENSE_KEY }}" -locations="filesystem:${{ GITHUB.WORKSPACE }}\migrations" info migrate info -url="${{ env.JDBC }}" -cleanDisabled="false" -errorOverrides="S0001:0:I-" -user=${{ secrets.USER }} -password=${{ secrets.PASSWORD }}
