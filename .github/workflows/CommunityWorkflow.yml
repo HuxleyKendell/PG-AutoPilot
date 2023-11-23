@@ -81,7 +81,7 @@ jobs:
       
       - name: Check Code
         run: |
-          flyway check -code -user=${{ secrets.USER }} -password=${{ secrets.PASSWORD }} -baselineOnMigrate="true" -licenseKey="${{ env.FLYWAY_LICENSE_KEY }}" -configFiles="${{ GITHUB.WORKSPACE }}\flyway.conf" -locations="filesystem:${{ GITHUB.WORKSPACE }}\migrations" -url="${{ env.JDBC }}" -cleanDisabled='false' "-reportFilename=${{ GITHUB.WORKSPACE }}\reports\${{ env.databaseName }}-Run-${{ GITHUB.RUN_ID }}-Check-Report.html"
+          flyway check -code -user=${{ secrets.USER }} -password=${{ secrets.PASSWORD }} -baselineOnMigrate="true" -licenseKey="${{ env.FLYWAY_LICENSE_KEY }}" -configFiles="${{ GITHUB.WORKSPACE }}\flyway.conf" -locations="filesystem:${{ GITHUB.WORKSPACE }}\migrations" -url="${{ env.JDBC }}" -cleanDisabled='false' "-reportFilename=${{ GITHUB.WORKSPACE }}\Reports\${{ env.databaseName }}-Run-${{ GITHUB.RUN_ID }}-Check-Report.html"
 
 
      # Create a directory to stage the artifact files
